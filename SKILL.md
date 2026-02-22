@@ -14,6 +14,16 @@ version: 0.1.0
 Transform git commit history into polished, customer-facing release notes.
 Categorize changes, filter internal noise, and produce structured markdown.
 
+## Agent Delegation
+
+Delegate git log analysis to `explorer` agent, changelog formatting to `writer` agent.
+
+```
+Main context (scope determination, style guide detection, offer post-generation options)
+  └─ Task(subagent_type: explorer, prompt: "Run git log [range] --oneline --no-merges in [repo path]. Categorize each commit as: Breaking/Feature/Improvement/Fix/Security/Noise. Return categorized list only, one line per commit.")
+  └─ Task(subagent_type: writer, prompt: "Format this categorized commit list into user-facing release notes for [version/date]. Style: [matched style]. Rewrite each entry to lead with the benefit. Return only the markdown changelog section.")
+```
+
 ## Workflow
 
 ### Step 1 — Determine Scope
