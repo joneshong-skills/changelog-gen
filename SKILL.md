@@ -1,12 +1,8 @@
 ---
 name: changelog-gen
-description: >-
-  This skill should be used when the user asks to "generate a changelog",
-  "create release notes", "write changelog", "changelog from commits",
-  "產生 changelog", "寫 release notes", "更新日誌", mentions changelog
-  generation, or discusses transforming git commits into user-facing
-  release notes or update documentation.
+description: "changelog, gen, generate, create, release, notes, write, 產生 changelog, 寫 release notes, 更新日誌"
 version: 0.1.0
+disable-model-invocation: true
 ---
 
 # Changelog Gen
