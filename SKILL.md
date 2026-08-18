@@ -2,7 +2,6 @@
 name: changelog-gen
 description: "changelog, gen, generate, create, release, notes, write, 產生 changelog, 寫 release notes, 更新日誌"
 version: 0.1.0
-disable-model-invocation: true
 ---
 
 # Changelog Gen
